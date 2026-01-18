@@ -8,11 +8,11 @@ function ShowMenu([array]$items, [boolean]$showLabel = $true) {
     for ($i = 1; $i -lt $items.Length + 1; $i++) {        
         $label = Strings $items[$i - 1]
         Write-Host "- [$i] " -ForegroundColor Magenta -NoNewline
-        Write-Host $label -ForegroundColor Blue
+        Write-Host $label -ForegroundColor DarkBlue
     }    
 }    
 function ListenMenu([array]$items, [boolean]$showLabel = $true) {
-    Write-Host $(Strings "make-choice") -ForegroundColor Blue -NoNewline
+    Write-Host $(Strings "make-choice") -ForegroundColor DarkBlue -NoNewline
     [int]$choice = Read-Host
 
     clr
