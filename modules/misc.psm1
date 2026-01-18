@@ -33,7 +33,7 @@ function Clr {
 
 function LoadLang([string]$lang = "en") {
     $res = Fetch "locals\$lang.json"
-    if (!($res)) {
+    if (-not $res -or $res -eq "") {
         if ($lang -eq "en") {
             Log "ERR" "Language file not found"
             exit
